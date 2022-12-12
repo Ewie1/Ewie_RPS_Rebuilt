@@ -1,70 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rock Paper Scissors game to pass time">
-    <meta name="keywords" content="rock, paper, scissors, game">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rock Paper Scissors game to pass time">
+  <meta name="keywords" content="rock, paper, scissors, game">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Bootstrap v5.1.3 link -->
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>-->
+  <!--Link style sheet to html head-->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--Link style sheet to html head-->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-         <!--Link to favicon icon-->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/apple-touch-icon.png">
-    <title>Rock Paper Scissors</title>
+  <!--Link to favicon icon-->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/apple-touch-icon.png">
+  <title>Rock Paper Scissors</title>
 </head>
+
 <body>
-     <!---  <div class="game-area"> -->
-        <header>
-            <h1>Rock Paper Scissors</h1>
-        </header>
-    
-        <!--Intro div-->
-        <div class="intro">
-            <img src="assets/images/frontimage.png" alt="picture of rock, paper and scissors together">
-        </div>
-       <!--- <div class = "intro">
+  <!---  <div class="game-area"> -->
+  <header>
+    <h1>Rock Paper Scissors</h1>
+  </header>
+
+  <!--Intro div
+  <div class="intro">
+    <img src="assets/images/frontimage.png" alt="picture of rock, paper and scissors together">
+  </div>-->
+  <!--- <div class = "intro">
             <button>Play Game</button>
         </div> -->
-        <div class="game-icons">
-          <p class="profile-name">name</p>
-          <i class="far fa-question-circle" id="instructions-icon" aria-label="Open game instructions icon">instructions</i>
-        </div>
-        <div id="myModal" class="modal border border-2 p-1 p-sm-1">
-          <div class="modal-content">
-              <h2 id="modal-header">How to play</h2>
-              <p>Login your username to start playing<br>
-                  Click to choose between Rock, Papper or Scissors<br>
-                  Papper can wrap Rock but Scissors will cut Papper and the Rock can crush Scissors!<br>
-                  The computer is tricky so be smart!<br>
-                  <br>
-                  <strong>Enjoy!</strong>
-              </p>
-              <button class="button" onclick="closeInstructions()">Close</button>
-          </div>
-          <div class="mt-3" id="login-screen">
-            
-            <p>Welcome To</p>
-            <h1 id="game-title" class="pb-3">Rock Papper
-              <br>Scissors
-            </h1>
-            
-            <div class="user-input">
-                <label for="user">Please enter your name</label>
-                <br>
-                <input type="text" id="user" name="user" maxlength=12>
-            </div>
+  <!--<div id="game-container" class="border-2 rounded bg-light">
+  <div class="game-icons">
+    <p class="profile-name" >name</p>
+    <i class="far fa-question-circle" id="instructions-icon" aria-label="Open game instructions icon">instructions</i>
+  </div>-->
+  <div id="game-container" class="border-2 rounded bg-light">
+    <!-- top line of game container with icons, username, level of game currently played -->
+    <div class="top-line">         
+        <i class="far fa-user-circle user-icon" id="user-icon" aria-hidden="true"></i>
+        <p id="username"></p>
+        <div id="difficulty-level"></div>
 
-            <button class="button" id="user-log">Start Game</button>
-            
-            <p class="user-log-error" id="error-message">
-                Please try again. <br>Username must be between 1 and 12 characters.
-            </p>
+          <span class="fa-stack fa-lg cloud-icon" id="cloud-icon" aria-hidden="true">
+            <i class="fas fa-cloud fa-stack-2x"></i>
+            <span class="fa fa-stack-1x" id="guesses"></span>
+          </span>
+
+            <i class="far fa-question-circle" id="instructions-icon" aria-label="Open game instructions icon"></i>
+    </div>
+
+    <!-- Main screen with game title and user login -->
+    <div class="mt-3" id="login-screen">
+        
+        <p>Welcome To</p>
+        <h1 id="game-title" class="pb-3">Rock Papper 
+            <br>
+            Scissors</h1>
+        
+        <div class="user-input">
+            <label for="user">Please enter your name</label>
+            <br>
+            <input type="text" id="user" name="user" maxlength=12>
         </div>
-      </div>
+
+        <button class="button" id="user-log">Start Game</button>
+        
+        <p class="user-log-error" id="error-message">
+            Please try again. <br>Username must be between 1 and 12 characters.
+        </p>
+    </div>
+
+    <!-- Modal with game instructions -->
+    <div id="myModal" class="modal border border-2 p-1 p-sm-1">
+        <div class="modal-content">
+            <h2 id="modal-header">How to play</h2>
+            <p>Login your username to start playing<br>
+              Click to choose between Rock, Papper or Scissors<br>
+              Papper can wrap Rock but Scissors will cut Papper and the Rock can crush Scissors!<br>
+              The computer is tricky so be smart!<br>
+              <br>
+              <strong>Enjoy!</strong>
+            </p>
+            <button class="button" onclick="closeInstructions()">Close</button>
+        </div>
+    </div>
+
+  
+  
+  <!-- Game script -->
+  <script src="assets/js/game.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
+
 </html>

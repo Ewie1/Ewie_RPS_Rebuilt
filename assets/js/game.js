@@ -1,157 +1,20 @@
-function main() {
-    let pScore = 0;
-    let cScore = 0;
-    /**Call Inner functions */
-    gameIntro();
-    runGame();
-    winGame();
-    loseGame();
+/**
+ * Add an event listener to the document and run the main screen with user log-in
+ */
+document.addEventListener('DOMContentLoaded', function () {
+  runMainScreen();
+});
+
+
+/**
+ * Set up of game variables to vary display/hide
+ */
+let mainLoginScreen = document.getElementById("login-screen");
+let getInstructions = document.getElementById("myModal");
+
+
+function runMainScreen () {
+  mainLoginScreen.style.display = "block";
   
-    /**function to fade out intro page 
-     * Fade in game page
-     */
-    function gameIntro() {
-      let playBtn = document.querySelector(".intro button");
-      let introScreen = document.querySelector(".intro");
-      let game = document.querySelector(".game");
-  
-      playBtn.addEventListener("click", function () {
-        introScreen.classList.add("fadeOut");
-        game.classList.add("fadeIn");
-      });
-    };
-    /**
-     * Run game function 
-     * add eventlistener to all buttons through for loop method
-     * return player selection image
-     * return computer random selection image
-     * 
-     */
-    function runGame() {
-      const options = document.querySelectorAll(".selections button");
-      const playerImage = document.querySelector(".player-image");
-      const computerImage = document.querySelector(".computer-image");
-      const computerOptions = ["rock", "paper", "scissors"];
-  
-      for (let i = 0; i < options.length; i++) {
-        options[i].addEventListener("click", function () {
-          let computerNumber = Math.floor(Math.random() * 3);
-          let computerSelection = computerOptions[computerNumber];
-          checkWinner(this.id, computerSelection);
-          playerImage.src = `assets/images/${this.id}.png`;
-          console.log(this.id)
-          computerImage.src = `assets/images/${computerSelection}.png`;
-        })
-      }
-    }
-    /**Incerement score results */
-    function scoreResults() {
-      let playerScore = document.getElementById("player-score");
-      let computerScore = document.getElementById("computer-score");
-      playerScore.innerText = pScore;
-      computerScore.innerText = cScore;
-    }
-    /**
-     * Determine rock, paper and scissors selection comparasion
-     * Display result mesaage win, lose or draw
-     * Increment scores
-     * Call score result function
-     * Call game winner function
-     * Call game loser function
-     */
-    function checkWinner(playerSelection, computerSelection) {
-      let displayResult = document.querySelector(".results");
-      if (playerSelection === computerSelection) {
-        displayResult.textContent = "Draw";
-        return;
-      }
-      if (playerSelection === "rock" && computerSelection === "scissors") {
-        displayResult.textContent = "Youu Wins!!";
-        pScore++;
-        scoreResults();
-        winGame();
-        loseGame();
-        return;
-      } else if (playerSelection === "rock" && computerSelection === "paper") {
-        displayResult.textContent = "You lose!";
-        cScore++;
-        scoreResults();
-        winGame();
-        loseGame();
-        return;
-      }
-      if (playerSelection === "paper" && computerSelection === "scissors") {
-        displayResult.textContent = "You lose!";
-        cScore++;
-        scoreResults();
-        winGame();
-        loseGame();
-        return;
-      } else if (playerSelection === "paper" && computerSelection === "rock") {
-        displayResult.textContent = "Youu Win!!";
-        pScore++;
-        scoreResults();
-        winGame();
-        loseGame();
-        return;
-      }
-      if (playerSelection === "scissors" && computerSelection === "rock") {
-        displayResult.textContent = "You lose!";
-        cScore++;
-        scoreResults();
-        winGame();
-        loseGame();
-        return;
-      } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        displayResult.textContent = "Youu Win!!";
-        pScore++;
-        scoreResults();
-        winGame();
-        loseGame();
-        return;
-      }
-    }
-    /**Win game function
-     * Stop click selection at max pscore value
-     * Fade out match screen and fade in restart screen
-     */
-    function winGame() {
-      let game = document.querySelector(".game");
-      let restartScreen = document.querySelector(".restart-game");
-      if (pScore === 12) {
-        gameOver();
-        game.classList.add("fadeOut");
-        restartScreen.classList.add("fadeIn");
-      }
-    }
-  
-    /**lose game function
-     * Stop click selection at max cscore value
-     * Fade out match screen and fade in restart screen
-     */
-    function loseGame() {
-      let game = document.querySelector(".game");
-      let restartScreen = document.querySelector(".restart-game");
-      if (cScore === 12) {
-        gameOver();
-        game.classList.add("fadeOut");
-        restartScreen.classList.add("fadeIn");
-      }
-    }
-    /**Game over function
-     * Prevent actions when selections are clicked
-     */
-    function gameOver() {
-      let rock = document.getElementById("rock");
-      let paper = document.getElementById("paper");
-      let scissors = document.getElementById("scissors");
-  
-      rock.setAttribute("disabled", "disabled");
-      paper.setAttribute("disabled", "disabled");
-      scissors.setAttribute("disabled", "disabled");
-    }
-  }
-  /**Call main function */
-  main();
-  
-  
+}
+
