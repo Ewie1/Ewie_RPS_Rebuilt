@@ -8,14 +8,40 @@
     <meta name="keywords" content="rock, paper, scissors, game">
     <!--Link style sheet to html head-->
     <link rel="stylesheet" href="assets/css/style.css">
+
          <!--Link to favicon icon-->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/apple-touch-icon.png">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <!---  <div class="game-area"> -->
+     <!---  <div class="game-area"> -->
         <header>
             <h1>Rock Paper Scissors</h1>
-        </header> 
+        </header>
+    
+        <!--Intro div-->
+        <div class="intro">
+            <img src="assets/images/frontimage.png" alt="picture of rock, paper and scissors together">
+        </div>
+        <div class = "intro">
+            <button>Play Game</button>
+        </div> 
+        <div>
+          <p class="profile-name">name</p>
+          <i class="far fa-question-circle" id="instructions-icon" aria-label="Open game instructions icon">instructions</i>
+        </div>
+        <div id="myModal" class="modal border border-2 p-1 p-sm-1">
+          <div class="modal-content">
+              <h2 id="modal-header">How to play</h2>
+              <p>Gu<br>
+                  Th<br>
+                  Yo<br>
+                  Wa<br>
+                  <br>
+                  <strong>Enjoy!</strong>
+              </p>
+              <button class="button" onclick="closeInstructions()">Close</button>
+          </div>
+      </div>
 </body>
 </html>
