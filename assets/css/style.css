@@ -9,7 +9,7 @@
 }
 /*Style the body color, add font style and center all text*/
 body {
-    background-color: brown;
+    
     text-align: center;
     font-family: 'Indie Flower', sans-serif;
 }
@@ -110,15 +110,15 @@ header {
 
 
 .show-modal {
-    color: var(--pink);
+    color: var(--black);
     width: 100%;
     height: 20rem;
     max-height: 30rem;
-    max-width: 50rem;
+    max-width: 30rem;
     align-items: center;
     display: block;
     z-index: 2;
-    left: 250px;
+    left: 400px;
     margin-top: 200px;
     
 }
@@ -138,6 +138,8 @@ header {
     padding-top: 400px;
     height: 50px;
     transform: translate(0%, -50%);
+    background: cover;
+    background: no repeat;
 }
 
 /*Add style and position the win and lose messages*/

@@ -35,18 +35,34 @@ getInstructions.addEventListener("click", showInstructions);
 
 function showInstructions() {
     let modal = document.getElementById("myModal");
+    let btnDisable = document.getElementById("ply-button");
     modal.classList.add("show-modal");
     document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
 }
 
 function closeInstructions() {
     let modal = document.getElementById("myModal");
+    let btnDisable = document.getElementById("ply-button");
     modal.classList.remove("show-modal");
     document.body.classList.remove('greyout-background');
+    runGame();
+}
+/**Show game over menu modal when when max points are met  */
+
+function gameOverMenu() {
+  let modal = document.getElementById("gameOverModal");
+  let btnDisable = document.getElementById("ply-button");
+  modal.classList.add("show-modal");
+  document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
 }
 
 
-
+function closeGameOverMenu() {
+  let modal = document.getElementById("gameOverModal");
+  let btnDisable = document.getElementById("ply-button");
+  modal.classList.remove("show-modal");
+  document.body.classList.remove('greyout-background');
+}
 
 /**function to fade out intro page 
  * Fade in game page
@@ -161,11 +177,7 @@ function winGame() {
   let restartScreen = document.querySelector(".restart-game");
   if (pScore === 12) {
     gameOver();
-
-    //game.classList.add("fadeOut");
-    //restartScreen.classList.add("fadeIn");
-    restartGame();
-
+    gameOverMenu();
   }
 }
 
@@ -178,10 +190,7 @@ function loseGame() {
   let restartScreen = document.querySelector(".restart-game");
   if (cScore === 12) {
     gameOver();
-    //game.classList.add("fadeOut");
-    //restartScreen.classList.add("fadeIn");
-    restartGame();
-
+    gameOverMenu();
   }
 }
 /**Game over function
@@ -198,11 +207,6 @@ function gameOver() {
 
 }
 
-
-function restartGame() {
-  
- 
-}
 
 
 

@@ -16,17 +16,17 @@
     <title>Rock Paper Scissors</title>
 </head>
 
-<body>
+<body style="background-image: url(assets/images/veckor.gif);">
     <!---  <div class="game-area"> -->
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
-
+    <div >
     <!--Intro div-->
     <div class="intro">
         <img src="assets/images/frontimage.png" alt="picture of rock, paper and scissors together">
         <!--<button>Let's Play</button>-->
-        <button type="button" class="btn btn-warning btn-md">Let's Play</button>
+        <button type="button" class="btn btn-warning btn-md" id="ply-button">Let's Play</button>
     
         
             <button type="button" class="btn btn-warning btn-md " id="instructions-icon" aria-label="Open game instructions icon">How to play</button>
@@ -43,7 +43,7 @@
     </div>
 
     <!---Wrapped game elements in one singel div -->
-    <div class="game fadeOut">
+    <div class="game fadeOut" >
         <div id="result">
             <p class="results">Fight!!</p>
         </div>
@@ -97,6 +97,20 @@
           <button class="button" onclick="closeInstructions()">Close</button>
         </div>
     </div>
+    </div>
+    <div>
+        <div id="gameOverModal" class="modal border border-2 p-1 p-sm-1">
+            <div class="modal-content">
+                <h2 id="modal-header">Game Over!</h2>
+                <button type="button" class="btn btn-warning btn-md" id="ply-button">Let's Play</button>
+              
+                <button class="button" onclick="gameIntro()">Restart game</button>
+                <button class="button" onclick="closeInstructions()">Play again</button>
+              
+              
+            </div>
+        </div>
+        </div>
     <footer>
         <!---Links to Githud page and Social media-->
         <a href="https://github.com/Ewie1/CI_PP2_RPS" target="_blank" rel="noopener"
