@@ -49,8 +49,15 @@ function closeInstructions() {
 }
 /**Show game over menu modal when when max points are met  */
 
-function gameOverMenu() {
-  let modal = document.getElementById("gameOverModal");
+function gameWin() {
+  let modal = document.getElementById("gameWinModal");
+  let btnDisable = document.getElementById("ply-button");
+  modal.classList.add("show-modal");
+  document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
+}
+
+function gameLose() {
+  let modal = document.getElementById("gameLoseModal");
   let btnDisable = document.getElementById("ply-button");
   modal.classList.add("show-modal");
   document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
@@ -59,10 +66,20 @@ function gameOverMenu() {
 
 function closeGameOverMenu() {
   let modal = document.getElementById("gameOverModal");
-  let btnDisable = document.getElementById("ply-button");
+
+  let playBtn = document.querySelector(".intro button");
+  let introScreen = document.querySelector(".intro");
+  let game = document.querySelector(".game");
+
+  playBtn.addEventListener("click", function () {
+    introScreen.classList.add("fadeOut");
+    game.classList.add("fadeIn");
+  });
+
   modal.classList.remove("show-modal");
+  
   document.body.classList.remove('greyout-background');
-}
+};
 
 /**function to fade out intro page 
  * Fade in game page
@@ -177,7 +194,7 @@ function winGame() {
   let restartScreen = document.querySelector(".restart-game");
   if (pScore === 12) {
     gameOver();
-    gameOverMenu();
+    gameWin();
   }
 }
 
@@ -190,7 +207,7 @@ function loseGame() {
   let restartScreen = document.querySelector(".restart-game");
   if (cScore === 12) {
     gameOver();
-    gameOverMenu();
+    gameLose();
   }
 }
 /**Game over function
