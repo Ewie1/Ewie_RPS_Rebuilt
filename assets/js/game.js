@@ -1,5 +1,12 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+  runLoginScreen();
+});
+
 let playBtn = document.querySelector(".intro button");
 let introScreen = document.querySelector(".intro");
+const loginScreen = document.getElementById("login-screen");
+let errorMessage = document.getElementById("error-message");
 let game = document.querySelector(".game");
 const options = document.querySelectorAll(".selections button");
 const playerImage = document.querySelector(".player-image");
@@ -14,21 +21,15 @@ let getInstructions = document.getElementById("instructions-icon");
 
 let pScore = 0;
 let cScore = 0;
-/**Call Inner functions */
-gameIntro();
-runGame();
-winGame();
-loseGame();
 
-function main() {
-  let pScore = 0;
-  let cScore = 0;
-  /**Call Inner functions */
-  gameIntro();
-  runGame();
-  winGame();
-  loseGame();
+
+function runLoginScreen() {
+  introScreen.style.display = "none"
+  loginScreen.style.display = "block"
+  errorMessage.style.display = "none"
+  document.getElementById("user").focus(); //focus on input element with cursor ready for username input
 }
+
 
 
 getInstructions.addEventListener("click", showInstructions);
@@ -224,7 +225,15 @@ function gameOver() {
 
 }
 
-
+function main() {
+  let pScore = 0;
+  let cScore = 0;
+  /**Call Inner functions */
+  gameIntro();
+  runGame();
+  winGame();
+  loseGame();
+}
 
 
 /**Call main function */

@@ -21,6 +21,7 @@
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
+
     <!--Intro div-->
 <div class="container" >
     <div class="intro">
@@ -31,6 +32,21 @@
         
             <button type="button" class="btn btn-warning btn-md " id="instructions-icon" aria-label="Open game instructions icon">How to play</button>
            <!--- <p id="instructions-icon" aria-label="Open game instructions icon">How to play</p> -->
+    </div>
+
+    <!--User Login Screen-->
+
+    <div class="mt-3" id="login-screen">
+        <img class="login-image" src="assets/images/frontimage.png" alt="picture of rock, paper and scissors together">
+        <div class="user-input">
+            <label for="user">Please enter your name</label>
+            <br>
+            <input type="text" id="user" name="user" maxlength=12>
+        </div>
+        <button class="button" id="user-log">Start Game</button>
+        <p class="user-log-error" id="error-message">
+            Please try again. <br>Username must be between 1 and 12 characters.
+        </p>
     </div>
 
     <!---Wrapped game elements in one singel div -->
