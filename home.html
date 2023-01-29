@@ -21,36 +21,17 @@
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
-
     <!--Intro div-->
 <div class="container" >
     <div class="intro">
         <!--<button>Let's Play</button>-->
-        <button type="button" class="btn btn-warning btn-md" id="ply-button">Let's Play</button>
-        <br>
+        <button type="button" class="btn btn-warning btn-md" id="ply-button">Let's Play</button>      
         <button type="button" class="btn btn-warning btn-md " id="instructions-icon" aria-label="Open game instructions icon">How to play</button>
-        
            <!--- <p id="instructions-icon" aria-label="Open game instructions icon">How to play</p> -->
     </div>
 
-    <!--User Login Screen-->
-    <!--<div class="container">
-    <div class="login fadeOut" id="login-screen">
-        <img class="login-image" src="assets/images/frontimage.png" alt="picture of rock, paper and scissors together">
-        <div class="user-input">
-            <label for="user">Please enter your name</label>
-            <br>
-            <input type="text" id="user" name="user" maxlength=12>
-        </div>
-        <button class="button" id="user-log">Start Game</button>
-        <p class="user-log-error" id="error-message">
-            Please try again. <br>Username must be between 1 and 12 characters.
-        </p>
-    </div>
-     </div> -->
-
     <!---Wrapped game elements in one singel div -->
-    <div class="game fadeOut" id="play-game">
+    <div class="game " id="game-remove">
         <div id="result">
             <p class="results">Fight!!</p>
         </div>
@@ -87,27 +68,8 @@
         </div>
         </div>
     </div>
-    <div class="restart-game fadeOut">
-        <h2>Game Over!</h2>
-        <!--<button type="button" class="btn btn-info" id="reset">Restart Game</button>
-        <button>Game Over!</button>-->
-    </div>
+    
     <div class="col-sm-12 justify-content-center">
-        <div id="loginModal" class="modal border border-2 p-1 p-sm-1">
-            <div class="modal-content">
-                <h2 id="modal-header">Login</h2>
-                <div class="user-input">
-                    <label for="user">Please enter your name</label>
-                    <br>
-                    <input type="text" id="user" name="user" maxlength=12>
-                </div>
-                <button class="button" id="user-log">Start Game</button>
-                <p class="user-log-error" id="error-message">
-                    Please try again. <br>Username must be between 1 and 12 characters.
-                </p>
-            </div>
-            </div>
-        </div>
     <div id="myModal" class="modal border border-2 p-1 p-sm-1">
         <div class="modal-content">
           <h2 id="modal-header">How to play</h2>
@@ -121,14 +83,14 @@
         </div>
     </div>
     </div>
-    <div>
+    <div id="modal-go">
         <div id="gameLoseModal" class="modal border border-2 p-1 p-sm-1">
             <div class="modal-content">
                 <h2 id="modal-header"> Sorry..You Lost..</h2>
                 <p>Try your luck again</p>
-                <a href="index.html">
-                <button class="restart-button">Restart game</button>
-                </a>
+                <a href="index.html"></a>
+                <button class="restart-button" id="ply-again" onclick="playAgain()">Restart game</button>
+                
             </div>
         </div>
         <div id="gameWinModal" class="modal border border-2 p-1 p-sm-1">
@@ -136,9 +98,9 @@
                 <h2 id="modal-header">You win!!</h2>
                 <p>Welcome to the winner circle</p><br>
                 <p>Play again</p>
-                <a href="index.html">
-                <button class="restart-button">Restart game</button>
-                </a>
+                <a href="index.html"></a>
+                <button class="restart-button" id="ply-again" onclick="playAgain()">Restart game</button>
+                
             </div>
         </div>
     </div>

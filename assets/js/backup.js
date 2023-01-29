@@ -1,10 +1,13 @@
-let playBtn = document.getElementById("ply-button");
+
+/*document.addEventListener('DOMContentLoaded', function () {
+  runLoginScreen();
+}); */
+
+let playBtn = document.querySelector(".intro button");
 let introScreen = document.querySelector(".intro");
 const loginScreen = document.getElementById("login-screen");
 let errorMessage = document.getElementById("error-message");
-const restartPlay = document.getElementById("ply-again");
-const gameReset = document.getElementById("modal-go")
-let game = document.querySelectorAll(".game");
+let game = document.querySelector(".game");
 const options = document.querySelectorAll(".selections button");
 const playerImage = document.querySelector(".player-image");
 const computerImage = document.querySelector(".computer-image");
@@ -15,32 +18,37 @@ let displayResult = document.querySelector(".results");
 let restartScreen = document.querySelector(".restart-game");
 let resetBtn = document.querySelectorAll(".restart-game button");
 let getInstructions = document.getElementById("instructions-icon");
-const loadGame =document.getElementById("play-game")
+
 let pScore = 0;
 let cScore = 0;
 
 
+/*function runLoginScreen() {
+  introScreen.style.display = "none"
+  loginScreen.style.display = "block"
+  errorMessage.style.display = "none"
+  document.getElementById("user").focus(); //focus on input element with cursor ready for username input
+} */
 
 /**
- * Verification of the user name input on the log-in screen */
+ * Verification of the user name input on the log-in screen
  
 document.getElementById("user-log").addEventListener("click", checkUsername);
 
 function checkUsername() {
     let username = document.getElementById("user").value.trim();
-    let game = document.querySelector(".game");
-    let modal = document.getElementById("loginModal");
 
     if (username.length >= 1 && username.length <= 12) {
-    game.classList.add("fadeIn");
-    modal.classList.remove("show-modal");
-
+      introScreen.style.display = "block"
+      loginScreen.style.display = "none"
     } else {
         errorMessage.style.display = "block";
         document.getElementById("user").focus();
         document.getElementById("user").value = "";
     }
 }
+*/
+
 
 getInstructions.addEventListener("click", showInstructions);
 
@@ -54,20 +62,8 @@ function closeInstructions() {
     let modal = document.getElementById("myModal");
     modal.classList.remove("show-modal");
     document.body.classList.remove('greyout-background');
-    
+    runGame();
 }
-
-playBtn.addEventListener("click", getLogin);
-
-function getLogin() {
-    let modal = document.getElementById("loginModal");
-    modal.classList.add("show-modal");
-    errorMessage.style.display = "none"
-    document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
-}
-
-
-
 /**Show game over menu modal when when max points are met  */
 
 function gameWin() {
@@ -82,35 +78,34 @@ function gameLose() {
   document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
 }
 
-function closeGameOverMenu() {
+
+/*function closeGameOverMenu() {
   let modal = document.getElementById("gameOverModal");
-  let playBtn = document.getElementById("ply-button");
+  let playBtn = document.querySelector(".intro button");
   let introScreen = document.querySelector(".intro");
   let game = document.querySelector(".game");
 
   playBtn.addEventListener("click", function () {
     introScreen.classList.add("fadeOut");
     game.classList.add("fadeIn");
-
   });
 
   modal.classList.remove("show-modal");
   
   document.body.classList.remove('greyout-background');
-};
-
+};*/
 
 /**function to fade out intro page 
  * Fade in game page
  */
 function gameIntro() {
-  let playBtn = document.getElementById("ply-button");
+  let playBtn = document.querySelector(".intro button");
   let introScreen = document.querySelector(".intro");
   let game = document.querySelector(".game");
 
   playBtn.addEventListener("click", function () {
     introScreen.classList.add("fadeOut");
-    login.classList.add("fadeIn");
+    game.classList.add("fadeIn");
   });
 };
 /**
@@ -209,6 +204,8 @@ function checkWinner(playerSelection, computerSelection) {
  * Fade out match screen and fade in restart screen
  */
 function winGame() {
+  let game = document.querySelector(".game");
+  let restartScreen = document.querySelector(".restart-game");
   if (pScore === 12) {
     gameOver();
     gameWin();
@@ -220,6 +217,8 @@ function winGame() {
  * Fade out match screen and fade in restart screen
  */
 function loseGame() {
+  let game = document.querySelector(".game");
+  let restartScreen = document.querySelector(".restart-game");
   if (cScore === 12) {
     gameOver();
     gameLose();
@@ -239,31 +238,6 @@ function gameOver() {
 
 }
 
-
-function playAgain() {
-  let modal = document.getElementById("gameWinModal");
-  let modalLose = document.getElementById("gameLoseModal");
-  const loginScreen = document.getElementById("login-screen");
-  const removeGame = document.getElementById("game-remove")
-  let rock = document.getElementById("rock");
-  let paper = document.getElementById("paper");
-  let scissors = document.getElementById("scissors");
-
-  rock.removeAttribute("disabled", "disabled");
-  paper.removeAttribute("disabled", "disabled");
-  scissors.removeAttribute("disabled", "disabled");
-  
-  pScore = 0;
-  cScore = 0;
-  modal.classList.remove("show-modal");
-  modalLose.classList.remove("show-modal");
-  introScreen.classList.add("fadeIn");
-  removeGame.style.display = "none";
-
-
-  
-} 
-
 function main() {
   /**Call Inner functions */
   gameIntro();
@@ -273,10 +247,5 @@ function main() {
   
 }
 
-/**Call Inner functions */
 
-gameIntro();
-runGame();
-winGame();
-loseGame();
-
+/**Call main function */
