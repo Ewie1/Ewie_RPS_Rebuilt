@@ -9,8 +9,14 @@
 }
 /*Style the body color, add font style and center all text*/
 body {
+    background: url("../images/photofunkybackground.gif");
+   /* background-color: var(--sky);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* opacity: .9; */
     text-align: center;
     font-family: 'Indie Flower', sans-serif;
+    
 }
 
 /*Set background color and font size for the header*/
@@ -132,7 +138,7 @@ input {
     display: block;
     z-index: 2;
     left: 400px;
-    margin-top: 75px;
+    margin-top: 150px;
     
 }
 
