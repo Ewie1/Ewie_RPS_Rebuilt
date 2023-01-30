@@ -55,9 +55,9 @@ header {
 }
 
 /*Add style for the intro page image*/
-.intro img {
-    margin-top: 30px;
-    height: 200px;
+.intro-image {
+    margin-top: 550px;
+    height: 150px;
     transform: scale(0.4);
 }
 
@@ -91,7 +91,7 @@ input {
     background: rgb(45, 70, 117);
     border-radius: 10px;*/
     font-size: 120%;
-    margin-top: 0px;
+    margin-top: 150px;
     cursor: pointer;
 }
 
@@ -302,6 +302,17 @@ footer a {
 
     .intro h2 {
         font-size: 100px;
+    }
+
+    .intro-image {
+        margin-top: 400px;
+        margin-left: -40px;
+        transform: scale(0.2);
+    }
+
+    .intro button {
+        font-size: 80%;
+        margin-top: 80px;
     }
 
     .game {
