@@ -9,7 +9,6 @@
 }
 /*Style the body color, add font style and center all text*/
 body {
-    
     text-align: center;
     font-family: 'Indie Flower', sans-serif;
 }
@@ -68,7 +67,7 @@ header {
 /* Override default dark outline color */
 input:focus {
     outline: none !important;
-    border-color: var(--sky);
+    
 }
 
 input {
@@ -112,7 +111,9 @@ input {
     text-transform: uppercase;
 }
 
-
+#myModal {
+    margin-top: 225px;
+}
 
 #modal-header {
     font-weight: bold;
@@ -250,7 +251,7 @@ div.fadeIn {
 }
 /*Add style for footer links*/
 footer {
-    margin-top: 160px;
+    margin-top: 200px;
 }
 
 footer a {
@@ -288,7 +289,7 @@ footer a {
     }
 
     footer {
-        margin-top: 300px;
+        margin-top: 250px;
     }
 }
 
@@ -296,7 +297,7 @@ footer a {
 @media screen and (max-width: 600px) {
 
     header {
-        font-size: 10px;
+        font-size: 0.5rem;
         padding: 5px;
     }
 
@@ -383,7 +384,7 @@ footer a {
 
 
     footer {
-        margin-top: 100px;
+        margin-top: 75px;
     }
 
 }

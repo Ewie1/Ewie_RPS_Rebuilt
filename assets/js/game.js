@@ -106,12 +106,13 @@ function closeGameOverMenu() {
 function gameIntro() {
   let playBtn = document.getElementById("ply-button");
   let introScreen = document.querySelector(".intro");
-  let game = document.querySelector(".game");
+  
 
   playBtn.addEventListener("click", function () {
     introScreen.classList.add("fadeOut");
     login.classList.add("fadeIn");
   });
+  
 };
 /**
  * Run game function 
