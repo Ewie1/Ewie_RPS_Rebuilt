@@ -10,10 +10,8 @@
 /*Style the body color, add font style and center all text*/
 body {
     background: url("../images/photofunkybackground.gif");
-   /* background-color: var(--sky);*/
     background-repeat: no-repeat;
     background-size: cover;
-   /* opacity: .9; */
     text-align: center;
     font-family: 'Indie Flower', sans-serif;
     
@@ -70,10 +68,16 @@ header {
     transform: scale(0.4);
 }
 
+#ply-button, #instructions-icon {
+    box-shadow: 1px 1px 10px ;
+    background-color: rgb(9, 80, 212);
+    border: none;
+}
+
+
 /* Override default dark outline color */
 input:focus {
-    outline: none !important;
-    
+    outline: none !important;  
 }
 
 input {
@@ -117,6 +121,11 @@ input {
     text-transform: uppercase;
 }
 
+.modal {
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px ;
+}
+
 #myModal {
     margin-top: 225px;
 }
@@ -129,7 +138,7 @@ input {
 
 
 .show-modal {
-    color: var(--black);
+    color: var(--black); 
     width: 100%;
     height: 20rem;
     max-height: 30rem;
@@ -138,9 +147,9 @@ input {
     display: block;
     z-index: 2;
     left: 400px;
-    margin-top: 150px;
-    
+    margin-top: 150px;  
 }
+
 
 .modal-content {
     box-shadow: 1px 1px 20px var(--light-blue);
@@ -148,6 +157,16 @@ input {
     display: block !important;
     height: 100%;
 }
+
+.close-button {
+    width: 4rem;
+    box-shadow: 1px 1px 10px ;
+    background-color: rgb(212, 9, 9);
+    border: none;
+    border-radius: 25px;
+}
+
+#user-log {}
 
 
 /*Add peramater and style to accomdate the game body fade*/
@@ -261,8 +280,9 @@ footer {
 }
 
 footer a {
-    color: blanchedalmond;
+    color: rgb(87, 10, 123);
     text-align: center;
+    font-size: 1rem;
 }
 
 /*Add style to adjust elements to fit screens 1200px*/
