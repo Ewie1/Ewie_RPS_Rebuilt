@@ -81,10 +81,10 @@ input:focus {
 }
 
 input {
-    width: 25%;
+    width: 50%;
     box-shadow: 1px 1px 10px ;
-    border: 1px solid rgb(35, 35, 164);;
-    font-weight: bold;
+    border: 1px solid rgb(35, 35, 164);
+    font-size: 1.5rem;
     border-radius: 10px;
 }
 
@@ -166,7 +166,38 @@ input {
     border-radius: 25px;
 }
 
-#user-log {}
+.user-input{
+    font-size: 2rem;
+}
+
+#user-log {
+    margin-top: 50px;
+    width: 100px;
+    box-shadow: 1px 1px 10px ;
+    background-color: rgb(26, 177, 6);
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+.restart-button {
+    margin-top: 40px;
+    height: 50px;
+    width: 100px;
+    box-shadow: 1px 1px 10px ;
+    background-color: rgb(35, 35, 164);
+    border-radius: 10px;
+    border: none;
+}
+
+#gameWinModal p {
+    font-size: 2rem;
+}
+
+#gameLoseModal p {
+    font-size: 2rem;
+}
 
 
 /*Add peramater and style to accomdate the game body fade*/
@@ -186,7 +217,7 @@ input {
 
 .results {
     font-size: 40px;
-    color: blanchedalmond;
+    color: rgb(189, 0, 0);
     margin-top: -30px;
 }
 
@@ -200,12 +231,9 @@ input {
 }
 
 /*Add color for score counts*/
-#player-score {
-    color: green;
-}
 
-#computer-score {
-    color: green;
+#computer-score, #player-score {
+    color: #fff;
 }
 
 /*Set height for selected displayed images */
@@ -238,7 +266,7 @@ input {
     background-color: antiquewhite;
     transition: 200ms;
     cursor: pointer;
-    box-shadow: 1px 1px 3px 3px rgb(227, 131, 53) ;
+    box-shadow: 1px 1px 3px 3px green;
 }
 
 .selection:hover {
@@ -248,7 +276,7 @@ input {
 /*Style play message below the icon selectors*/
 #play-message {
     font-size: 1rem;
-    color: white;
+    color: rgb(27, 1, 1);
 }
 
 .restart {
@@ -282,7 +310,7 @@ footer {
 footer a {
     color: rgb(87, 10, 123);
     text-align: center;
-    font-size: 1rem;
+    
 }
 
 /*Add style to adjust elements to fit screens 1200px*/
@@ -406,6 +434,22 @@ footer a {
     .show-modal {
         margin-left: -400px;
         transform: scale(0.8);
+    }
+
+    .user-input{
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    #gameWinModal p {
+        font-size: 1rem;
+    }
+    
+    #gameLoseModal p {
+        font-size: 1rem;
     }
 
 
