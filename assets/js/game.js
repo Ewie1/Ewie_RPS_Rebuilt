@@ -34,6 +34,29 @@ function checkUsername() {
     }
 }
 
+
+/**
+ * Reset score and remove disable attribute 
+ * play again
+ */ 
+function gameRestart() {
+  let playerScore = document.getElementById("player-score");
+  let computerScore = document.getElementById("computer-score");
+  let winModal = document.getElementById("gameWinModal");
+  let loseModal = document.getElementById("gameLoseModal");
+  pScore = 0;
+  cScore = 0;
+  
+  rock.removeAttribute("disabled", "disabled");
+  paper.removeAttribute("disabled", "disabled");
+  scissors.removeAttribute("disabled", "disabled")
+  
+  winModal.classList.remove("show-modal");
+  loseModal.classList.remove("show-modal");
+  playerScore.innerText = 0;
+  computerScore.innerText = 0;
+}
+
 /**
  * Input of username using by pressing enter key
  */
@@ -182,6 +205,8 @@ function winGame() {
   if (pScore === 12) {
     gameOver();
     gameWin();
+    pScore = 0;
+    cScore = 0;
   }
 }
 
@@ -193,6 +218,8 @@ function loseGame() {
   if (cScore === 12) {
     gameOver();
     gameLose();
+    pScore = 0;
+    cScore = 0;
   }
 }
 
