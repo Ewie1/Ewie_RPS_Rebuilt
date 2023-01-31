@@ -7,6 +7,7 @@
     padding: 0;
     border: none;
 }
+
 /*Style the body color, add font style and center all text*/
 body {
     background: url("../images/photofunkybackground.gif");
@@ -14,7 +15,6 @@ body {
     background-size: cover;
     text-align: center;
     font-family: 'Indie Flower', sans-serif;
-    
 }
 
 /*Set background color and font size for the header*/
@@ -68,59 +68,20 @@ header {
     transform: scale(0.4);
 }
 
-#ply-button, #instructions-icon {
+#ply-button, #instructions-btn {
     box-shadow: 1px 1px 10px ;
     background-color: rgb(9, 80, 212);
     border: none;
 }
 
-
-/* Override default dark outline color */
-input:focus {
-    outline: none !important;  
-}
-
-input {
-    width: 50%;
-    box-shadow: 1px 1px 10px ;
-    border: 1px solid rgb(35, 35, 164);
-    font-size: 1.5rem;
-    border-radius: 10px;
-}
-
-/*Add style for start game button*/
-
+/*Add style for start game button and Modal contents*/
 .intro button {
-  /*  width: 150px;
-    height: 50px;
-    background: none;
-    border: 1px solid orangered;
-    color: rgb(224, 224, 224);
-    font-size: 20px;
-    background: rgb(45, 70, 117);
-    border-radius: 10px;*/
     font-size: 120%;
     margin-top: 150px;
     cursor: pointer;
 }
 
-.top-line {
-    position:inherit;
-    background-color: black;
-}
-
-
-#instructions-icon {
-    font-size: 120%;
-    margin-top: 160px;
-    cursor: pointer;
-    position:absolute;  
-}
-
-#login-screen, #phrase, .result-text {
-    text-transform: uppercase;
-}
-
+/* Set Modal position, style and size*/
 .modal {
     border-radius: 20px;
     box-shadow: 1px 1px 10px ;
@@ -130,12 +91,16 @@ input {
     margin-top: 225px;
 }
 
+/*Style modal text and contents*/
+#login-screen, #phrase, .result-text {
+    text-transform: uppercase;
+}
+
 #modal-header {
     font-weight: bold;
     font-family: 'Rammetto One', cursive;
     padding-bottom: 0.5rem;
 }
-
 
 .show-modal {
     color: var(--black); 
@@ -150,12 +115,36 @@ input {
     margin-top: 150px;  
 }
 
-
 .modal-content {
     box-shadow: 1px 1px 20px var(--light-blue);
     padding: 4%;
     display: block !important;
     height: 100%;
+}
+
+#gameWinModal p {
+    font-size: 2rem;
+}
+
+#gameLoseModal p {
+    font-size: 2rem;
+}
+
+/*Style Modal input and buttons */
+input:focus {
+    outline: none !important;  
+}
+
+input {
+    width: 50%;
+    box-shadow: 1px 1px 10px ;
+    border: 1px solid rgb(35, 35, 164);
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.user-input{
+    font-size: 2rem;
 }
 
 .close-button {
@@ -165,21 +154,6 @@ input {
     border: none;
     border-radius: 25px;
 }
-
-.user-input{
-    font-size: 2rem;
-}
-
-#user-log {
-    margin-top: 50px;
-    width: 100px;
-    box-shadow: 1px 1px 10px ;
-    background-color: rgb(26, 177, 6);
-    border-radius: 10px;
-    border: none;
-}
-
-
 
 .restart-button {
     margin-top: 40px;
@@ -191,14 +165,14 @@ input {
     border: none;
 }
 
-#gameWinModal p {
-    font-size: 2rem;
+#log-user {
+    margin-top: 50px;
+    width: 100px;
+    box-shadow: 1px 1px 10px ;
+    background-color: rgb(26, 177, 6);
+    border-radius: 10px;
+    border: none;
 }
-
-#gameLoseModal p {
-    font-size: 2rem;
-}
-
 
 /*Add peramater and style to accomdate the game body fade*/
 .game {
@@ -231,7 +205,6 @@ input {
 }
 
 /*Add color for score counts*/
-
 #computer-score, #player-score {
     color: #fff;
 }
@@ -399,7 +372,6 @@ footer a {
         height: 100px;
     }
 
-
     .result-selection {
         height: 100%;
         display: inline-block;
@@ -430,7 +402,6 @@ footer a {
         margin-right: -5px; 
     }
 
-
     .restart-game {
         margin-top: -100px;
     }
@@ -456,7 +427,6 @@ footer a {
         font-size: 1rem;
     }
 
-
     footer {
         margin-top: 75px;
     }
@@ -464,5 +434,4 @@ footer a {
     footer a {
         font-size: 1rem;
     }
-
 }

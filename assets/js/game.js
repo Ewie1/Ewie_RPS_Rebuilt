@@ -9,7 +9,7 @@ const computerOptions = ["rock", "paper", "scissors"];
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
 let displayResult = document.querySelector(".results");
-let getInstructions = document.getElementById("instructions-icon");
+let getInstructions = document.getElementById("instructions-btn");
 let modal = document.getElementById("gameWinModal");
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
@@ -24,7 +24,7 @@ let cScore = 0;
 /**
  * Verification of the user name input on the log-in screen */
  
-document.getElementById("user-log").addEventListener("click", checkUsername);
+document.getElementById("log-user").addEventListener("click", checkUsername);
 
 function checkUsername() {
     let username = document.getElementById("user").value.trim();
