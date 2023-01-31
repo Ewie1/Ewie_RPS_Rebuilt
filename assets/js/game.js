@@ -34,6 +34,15 @@ function checkUsername() {
     }
 }
 
+/**
+ * Input of username using by pressing enter key
+ */
+document.getElementById("user").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+      checkUsername();
+  }
+});
+
 getInstructions.addEventListener("click", showInstructions);
 
 function showInstructions() {
