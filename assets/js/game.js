@@ -34,29 +34,6 @@ function checkUsername() {
     }
 }
 
-
-/**
- * Reset score and remove disable attribute 
- * play again
- */ 
-function gameRestart() {
-  let playerScore = document.getElementById("player-score");
-  let computerScore = document.getElementById("computer-score");
-  let winModal = document.getElementById("gameWinModal");
-  let loseModal = document.getElementById("gameLoseModal");
-  pScore = 0;
-  cScore = 0;
-  
-  rock.removeAttribute("disabled", "disabled");
-  paper.removeAttribute("disabled", "disabled");
-  scissors.removeAttribute("disabled", "disabled")
-  
-  winModal.classList.remove("show-modal");
-  loseModal.classList.remove("show-modal");
-  playerScore.innerText = 0;
-  computerScore.innerText = 0;
-}
-
 /**
  * Input of username using by pressing enter key
  */
@@ -84,18 +61,6 @@ function getLogin() {
     let modal = document.getElementById("loginModal");
     modal.classList.add("show-modal");
     errorMessage.style.display = "none"
-}
-
-/**Show game over menu modal when when max points are met  */
-
-function gameWin() {
-  let modal = document.getElementById("gameWinModal");
-  modal.classList.add("show-modal");
-}
-
-function gameLose() {
-  let modal = document.getElementById("gameLoseModal");
-  modal.classList.add("show-modal");
 }
 
 /**function to fade out intro page 
@@ -231,6 +196,40 @@ function gameOver() {
   rock.setAttribute("disabled", "disabled");
   paper.setAttribute("disabled", "disabled");
   scissors.setAttribute("disabled", "disabled");
+}
+
+/**Show game over menu modal when when max points are met  */
+
+function gameWin() {
+  let modal = document.getElementById("gameWinModal");
+  modal.classList.add("show-modal");
+}
+
+function gameLose() {
+  let modal = document.getElementById("gameLoseModal");
+  modal.classList.add("show-modal");
+}
+
+/**
+ * Reset score and remove disable attribute 
+ * play again
+ */ 
+function gameRestart() {
+  let playerScore = document.getElementById("player-score");
+  let computerScore = document.getElementById("computer-score");
+  let winModal = document.getElementById("gameWinModal");
+  let loseModal = document.getElementById("gameLoseModal");
+  pScore = 0;
+  cScore = 0;
+  
+  rock.removeAttribute("disabled", "disabled");
+  paper.removeAttribute("disabled", "disabled");
+  scissors.removeAttribute("disabled", "disabled")
+  
+  winModal.classList.remove("show-modal");
+  loseModal.classList.remove("show-modal");
+  playerScore.innerText = 0;
+  computerScore.innerText = 0;
 }
 
 /**Call Inner functions */
