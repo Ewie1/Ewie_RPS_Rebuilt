@@ -1,108 +1,366 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock Paper Scissors
+(Developer: Ewart Hestick)
 
-Welcome Ewie1,
+![Mockup image](docs/am-i-responsive.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Live webpage](https://ewie1.github.io/CI_PP2_RPS/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Table of Content
 
-## Gitpod Reminders
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Site Owner Goals](#site-owner-goals)
+2. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requrements and Expectations](#user-requrements-and-expectations)
+    3. [User Stories](#user-stories)
+3. [Design](#design)
+    1. [Design Choices](#design-choices)
+    2. [Colour](#colours)
+    3. [Fonts](#fonts)
+    4. [Structure](#structure)
+    5. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks-&-tools)
+5. [Features](#features)
+6. [Testing](#validation)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [Accessibility](#accessibility)
+    4. [Performance](#performance)
+    5. [Device testing](#performing-tests-on-various-devices)
+    6. [Browser compatibility](#browser-compatability)
+    7. [Testing user stories](#testing-user-stories)
+8. [Bugs](#Bugs)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Project Goals 
+ 
 
-`python3 -m http.server`
+### User Goals
 
-A blue button should appear to click: _Make Public_,
+- Play a simple interactive game rock paper scissors
+- 
 
-Another blue button should appear to click: _Open Browser_.
+### Site Owner Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Build an easy to use interactive game 
+- Build a game with an attractive design
+- Build and game that is simple to navigate 
 
-A blue button should appear to click: _Make Public_,
+## User Experience
 
-Another blue button should appear to click: _Open Browser_.
+### Target Audience
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- This game is build for the simple minded audience
+- Audience who just want something simple to pass time 
+- Younger Audience whi like cool images 
 
-To log into the Heroku toolbelt CLI:
+### User Reqirements and Expectaions
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Simple understanding
+- Bright images
+- Responsive features
+- Play game on varius devices
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User Stories
 
-------
+####  User 
 
-## Release History
+ 1. As a fisrt time user i want quick game start
+ 2. As a first time user i want see attractive characters
+ 3. As a first time user i want to have active selection options
+ 4. As a first user have to see a win or lose message
+ 5. As a first time user i want to know my scores
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Site Owner 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+6. As a  site owner i want the gameto have an end  function 
+7. As a site Owner I want the user enjoy the creative output of the game
+8.  As a owner I want user to have a customized 404 error page if the wedsite fail to load
+## Design
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Design Choices
+The rock paper scissors game was with special images to give the game charactor and a competitive feel
+### Colour
+The colors brown, black, white, etc were chosen to give an animated feel.
+### Fonts
+The font indie flower was chosen to give a relaxed feel to the game
+### Structure
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- Intro 
+- Game page
+- Game over and Restart page
+- 404 page
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Wireframes
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<details><summary>Into</summary>
+<img src="/docs/wireframes/intro-page.png"> 
+<img src="/docs/wireframes/intro page ipad.png"> 
+<img src="/docs/wireframes/intro page iphone.png"> 
+</details>
+<details><summary>Game</summary>
+<img src="/docs/wireframes/game-page.png">
+<img src="/docs/wireframes/game page ipad.png">
+<img src="/docs/wireframes/game page iphone.png">
+</details>
+<details><summary>404 page</summary>
+<img src="docs/wireframes/404 page.png">
+<img src="docs/wireframes/404 page ipad.png">
+<img src="docs/wireframes/404 page iphone.png">
+</details>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Technologies Used
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Languages
+- HTML
+- CSS
+- JavaScript
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Frameworks & Tools
+- Git
+- GitHub
+- Gitpod
+- Tinypng
+- Balsamiq
+- Google Fonts
+- Font Awsome
+- Favicon<span>.</span>io
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Features
+The page consists of 3 pages and 9 sections
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Intro page
+- The intro page is consist of a small friendly dispalyed image of RocK,Paper, Scissors together
+along a play game button which leads to the game page with a the header and footer contents included.
+![intro-page](docs/features/intro.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Header Display
+- The header give the name of the game with a special selected font style
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![game-header](docs/features/header.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Game area
+- The game area is shown after the intro page. This area contains all the reactive icons, images, messages for the player to experience.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![game-area](docs/features/game-area.png) 
 
-------
+### Game message
+- The game message is designed with a large using the indie flower font to display to the user wheather their selection have win, lost or draw.
 
-## FAQ about the uptime script
+![game-message](docs/features/result-message .png)
 
-**Why have you added this script?**
+### Score Count
+- The score count features located on the top left and top right of the game area shows the count of when the player win and when the computer win to give the player and idea of if they are winner or not. If there is a draw the numbers will remain the same. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![score-count](docs/features/result-message .png)
 
-**How will this affect me?**
+### Selected Images display
+- The selected image display shows animated images of a rock, a paper and  scissors to the player or computer selections. These images give the game character.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![selected-images-display](docs/features/selected-characters.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Selection btns
+- The selection buttons are iconic rock, paper, scissors which also gives the game character and are used to for the player to pick a choice.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![selection-buttons](docs/features/selector-icons.png)
 
-**So….?**
+### Game over
+- The game over button appears when the game chooses the game winner which is determined at the 12 winning score on either side.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![game-over](docs/features/gameover-button.png)
 
-**Can I opt out?**
+### Footer
+- The game footer is consist of the link to the Github link for the game and the linkedin for the designer.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![footer](docs/features/footer-links.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### 404
 
-**Anything more?**
+- The 404 is the error page which returns the user to the game if an error occure or the wrong search link is used.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![404-page](docs/features/404page.png)
 
----
 
-Happy coding!
+## Validation
+
+### HTML Validation
+
+<details><summary>Game page</summary>
+<img src="/docs/validations/indexhtmlvalidation.png">
+</details>
+
+### CSS Validation
+
+<details><summary>Style</summary>
+<img src="/docs/validations/cssvalidation.png">
+</details>
+
+### JavaScript Validation
+
+<details><summary>Js</summary>
+<img src="/docs/validations/js-validation.png">
+</details>
+
+### Accessibility
+
+<details><summary>Game Intro</summary>
+<img src="docs/validations/waves-ass.png">
+</details>
+<details><summary>Game Area</summary>
+<img src="docs/validations/game-page-ass.png">
+</details>
+
+### Performance 
+
+<details><summary>Game</summary>
+<img src="docs/validations/lighthouse-intro.png">
+</details>
+
+### Performing tests on various devices 
+
+- HP EllitBook
+- Amazon fire table 7
+- Samsung galaxy 20
+
+### Browser compatability
+
+- Tested on Goole Chrome
+- Tested Micrsoft Edge
+- Tested on Morzilla Firefox
+
+### Testing user stories
+
+1. As a first time user i want quick game start
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Play button | Clicked | Fades page to game area | Works as expected |
+
+   <details><summary>Screenshots</summary>
+   <img src="docs/features/edited-button.jpg">
+   </details>
+
+2.  As a first time user i want see attractive characters
+
+    | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+    |-------------|------------|---------------------|-------------------|
+    | Game area | leave intro page  | all game character visible | Works as expected |
+
+     <details><summary>Screenshots</summary>
+     <img src="docs/features/game-area.png">
+     </details>
+
+3. As a first time user i want to have active selection options
+  
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Selsction icons | click selector icons| rock,paper or scissor image changes | Works as expected |
+    <details><summary>Screenshots</summary>
+    <img src="docs/features/edited-selectors.jpg">
+    </details>
+
+4. As a first user have to see a win or lose message
+
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Result Message | click selector icons  |appears when selected options are compared  | Works as expected |
+    <details><summary>Screenshots</summary>
+    <img src="docs/features/edited-results.jpg">
+    </details>
+
+5. As a first time user i want to know my scores
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Score count dispaly | click selector icons | score count changes | Works as expected |
+
+    <details><summary>Screenshots</summary>
+    <img src="docs/features/edited-score.jpg">
+    </details>
+
+6. As a  site owner i want the game to have an end  function  
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Game over message | game score raises to 12 | selectors are disable with a game over message | Works as expected |
+
+     <details><summary>Screenshots</summary>
+     <img src="docs/features/gameover-button.png">
+     </details>
+
+7. As a site Owner I want the user enjoy the creative output of the game
+
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |   
+   |-------------|------------|---------------------|-------------------|
+   | Game area | click play game button  | game is ready for user input | Works as expected |
+
+     <details><summary>Screenshots</summary>
+     <img src="docs/features/intro.png">
+     <img src="docs/features/game-area.png">
+     </details>
+
+8. As a owner I want user to have a cutomized 404 error page if the wedsite fail to load
+
+    | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+    |-------------|------------|---------------------|-------------------|
+    | 404 error page | On non-matched URL| 404 page present with a return button to the game intro page | Works as expected |
+
+    <details><summary>Screenshots</summary>
+    <img src="docs/features/404page.png">
+    </details>
+
+
+    
+## Bugs
+  List of bugs found and fixes used ti mitigate them.
+
+- Bug: W3C Validator fauled due to empty player and computer selected img tag source.
+  Fix: Add default image file to img tag sources. 
+- Bug: Error fualt due to redundant undefined function
+  Fix: Deleted function from call list
+- Bug: Console log detect variable with null value called to textcontent in win game function
+    Fix: Deleted redundant code and confirm error fixed
+- Bug:  Console log detect variable with null value called to textcontent in lose game function
+  Fix:  Deleted redundant code and confirm error fixed
+- Bug: Footer links dispaly high on the iphone response screen
+   Fix: Adjusted footer positon
+- Bug: W3C Validator detected stray div tag in index.html
+  Fix: Deleted div tag and confirm index.html pass validation
+
+## Deployment
+The game was deployed using GitHub Pages by following these steps:
+1. In the GitHub repository navigate to the Settings tab
+2. On the left hand menu select Pages
+3. For the source select Branch: master
+4. After the webpage refreshes automaticaly you will se a ribbon on the top saying: "Your site is published at "https://ewie1.github.io/CI_PP2_RPS/"
+
+You can for fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
+
+You can clone the repository by following these steps:
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)  
+7. Press Enter to create your local clone.
+
+## Credits
+
+### Media
+
+
+### Code
+ - My HTML code from lessons and formats from the html module and walk through project which then evolved into my owm structure as i gain more knowledge by trail and error.
+ - My CSS code was also built on the concept of trail and error.
+ - My JavaScript was reference form research, not an easy task as a first time finding a way implement JavaScript code but through alot of research, stackoverflow, youtube, codeInstitute module and lovemath walk project i have manage put my Javascript code together.
+
+
+## Acknowledgements
+- Thank you to my mentor Mo Shami great guidance.
+- Acknowledge my brother Addan Mc Collin for support form a user's veiw
+- Thankful to the Slack team for tips

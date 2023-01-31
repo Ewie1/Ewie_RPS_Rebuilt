@@ -1,23 +1,15 @@
 let playBtn = document.getElementById("ply-button");
 let introScreen = document.querySelector(".intro");
 let errorMessage = document.getElementById("error-message");
-let game = document.querySelectorAll(".game");
 const options = document.querySelectorAll(".selections button");
 const playerImage = document.querySelector(".player-image");
 const computerImage = document.querySelector(".computer-image");
 const computerOptions = ["rock", "paper", "scissors"];
-let playerScore = document.getElementById("player-score");
-let computerScore = document.getElementById("computer-score");
 let displayResult = document.querySelector(".results");
 let getInstructions = document.getElementById("instructions-btn");
-let modal = document.getElementById("gameWinModal");
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
-
-
-
-
 let pScore = 0;
 let cScore = 0;
 
@@ -81,7 +73,6 @@ function gameIntro() {
   
   playBtn.addEventListener("click", function () {
     introScreen.classList.add("fadeOut");
-    login.classList.add("fadeIn");
   }); 
 }
 
@@ -100,9 +91,8 @@ function runGame() {
       let computerSelection = computerOptions[computerNumber];
       checkWinner(this.id, computerSelection);
       playerImage.src = `assets/images/${this.id}.png`;
-      console.log(this.id)
       computerImage.src = `assets/images/${computerSelection}.png`;
-    })
+    });
   }
 }
 
