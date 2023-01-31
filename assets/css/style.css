@@ -43,7 +43,7 @@ header {
 /*Style for 404 error page*/
 .intro h2 {
     margin-top: 300px;
-    font-size: 3rem;
+    font-size: 150;
     color: rgb(212, 9, 9);
 }
 
@@ -51,17 +51,6 @@ header {
     margin-top: 10px;
     font-size: 2rem;
     color: rgb(212, 9, 9);
-}
-
-.intro a {
-    text-decoration: none;
-    margin-top: 40px;
-    height: 50px;
-    width: 100px;
-    box-shadow: 1px 1px 10px ;
-    background-color: rgb(35, 35, 164);
-    border-radius: 10px;
-    border: none;
 }
 
 /*Add style for the intro page image*/
