@@ -74,6 +74,13 @@ header {
     border: none;
 }
 
+#instructions-btn {
+    font-size: 120%;
+    margin-top: 160px;
+    cursor: pointer;
+    position:absolute;  
+}
+
 /*Add style for start game button and Modal contents*/
 .intro button {
     font-size: 120%;
@@ -96,10 +103,13 @@ header {
     text-transform: uppercase;
 }
 
-#modal-header {
+.modal-header {
     font-weight: bold;
     font-family: 'Rammetto One', cursive;
     padding-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-left: 120px;
+    border: none;
 }
 
 .show-modal {
@@ -120,6 +130,30 @@ header {
     padding: 4%;
     display: block !important;
     height: 100%;
+}
+
+#loginModal h2{
+    font-weight: bold;
+    font-family: 'Rammetto One', cursive;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    border: none; 
+}
+
+#gameWinModal h2 {
+    font-weight: bold;
+    font-family: 'Rammetto One', cursive;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    border: none; 
+}
+
+#gameLoseModal h2{
+    font-weight: bold;
+    font-family: 'Rammetto One', cursive;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    border: none; 
 }
 
 #gameWinModal p {
