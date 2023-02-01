@@ -134,12 +134,17 @@ The font indie flower was chosen to give a relaxed feel to the game
 - Favicon<span>.</span>io
 
 ## Features
-The page consists of 3 pages and 9 sections
+The page consists of 3 pages
 
 ### Intro page
 - The intro page is consist of a small friendly dispalyed image of RocK,Paper, Scissors together
 along a play game button which leads to the game page with a the header and footer contents included.
 ![intro-page](docs/features/game.png)
+
+### Show Instructions
+- The instructions Modal describe how the game is to be played
+
+![Instructions-modal](docs/features/instruction-modal.JPG)
 
 ### Header Display
 - The header give the name of the game with a special selected font style
@@ -159,17 +164,17 @@ along a play game button which leads to the game page with a the header and foot
 ### Score Count
 - The score count features located on the top left and top right of the game area shows the count of when the player win and when the computer win to give the player and idea of if they are winner or not. If there is a draw the numbers will remain the same. 
 
-![score-count](docs/features/result-message.png)
+![score-count](docs/features/result-msg.JPG)
 
 ### Selected Images display
 - The selected image display shows animated images of a rock, a paper and  scissors to the player or computer selections. These images give the game character.
 
-![selected-images-display](docs/features/selected-characters.png)
+![selected-images-display](docs/features/slection-image.JPG)
 
 ### Selection btns
 - The selection buttons are iconic rock, paper, scissors which also gives the game character and are used to for the player to pick a choice.
 
-![selection-buttons](docs/features/selector-icons.png)
+![selection-buttons](docs/features/selction-btn.JPG)
 
 ### Game over
 - The game over button appears when the game chooses the game winner which is determined at the 12 winning score on either side.
