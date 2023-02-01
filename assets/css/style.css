@@ -455,6 +455,14 @@ footer a {
         margin-top: -100px;
     }
 
+    .modal-header {
+        font-weight: bold;
+        margin-top: -10px;
+        padding-bottom: 0rem;
+        font-size: 1.5rem;
+        margin-left: 75px;
+    }
+
     .show-modal {
         margin-left: -400px;
         transform: scale(0.8);
