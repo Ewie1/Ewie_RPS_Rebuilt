@@ -198,7 +198,7 @@ along a play game button which leads to the game page with a the header and foot
 ### HTML Validation
 
 <details><summary>Game page</summary>
-<img src="/docs/validations/indexhtmlvalidation.png">
+<img src="/docs/validations/index-validation.JPG">
 </details>
 
 ### CSS Validation
@@ -216,7 +216,7 @@ along a play game button which leads to the game page with a the header and foot
 ### Accessibility
 
 <details><summary>Game Intro</summary>
-<img src="docs/validations/waves-ass.png">
+<img src="/docs/validations/waves-ass.png">
 </details>
 <details><summary>Game Area</summary>
 <img src="docs/validations/game-page-ass.png">
@@ -225,7 +225,7 @@ along a play game button which leads to the game page with a the header and foot
 ### Performance 
 
 <details><summary>Game</summary>
-<img src="docs/validations/lighthouse-intro.png">
+<img src="docs/validations/lighthouse-validation.JPG">
 </details>
 
 ### Performing tests on various devices 
