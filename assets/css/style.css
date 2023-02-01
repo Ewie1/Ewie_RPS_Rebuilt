@@ -11,6 +11,7 @@
 
 /*Style the body color, add font style and center all text*/
 body {
+    height: 100%;
     background: url("../images/photofunkybackground.gif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +45,7 @@ header {
 /*Style for 404 error page*/
 .intro h2 {
     margin-top: 300px;
-    font-size: 120px;
+    font-size: 110px;
     color: rgb(212, 9, 9);
     font-family: "Press Start 2P", sans-serif;
 }
@@ -60,9 +61,11 @@ header {
     height: 30px;
     width: 150px;
     box-shadow: 1px 1px 10px ;
-    background-color: rgb(41, 35, 164);
+    background-color: rgb(212, 9, 9);
     border-radius: 5px;
     border: none;
+    font-family: 'Indie Flower', sans-serif;
+
 }
 
 /*Add style for the intro page image*/
