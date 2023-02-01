@@ -1,6 +1,7 @@
 /*Add link to font style*/
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 
 /*Removed default settings*/
 * {
@@ -112,10 +113,10 @@ header {
 
 .modal-header {
     font-weight: bold;
-    font-family: 'Rammetto One', cursive;
+    font-family: 'Rammetto One', sans-serif;
     padding-bottom: 0.5rem;
     font-size: 2rem;
-    margin-left: 120px;
+    margin-left: 100px;
     border: none;
 }
 
@@ -141,7 +142,7 @@ header {
 
 #loginModal h2{
     font-weight: bold;
-    font-family: 'Rammetto One', cursive;
+    font-family: 'Rammetto One', sans-serif;
     padding-bottom: 0.5rem;
     font-size: 2rem;
     border: none; 
@@ -149,7 +150,7 @@ header {
 
 #gameWinModal h2 {
     font-weight: bold;
-    font-family: 'Rammetto One', cursive;
+    font-family: 'Rammetto One', sans-serif;
     padding-bottom: 0.5rem;
     font-size: 2rem;
     border: none; 
@@ -157,7 +158,7 @@ header {
 
 #gameLoseModal h2{
     font-weight: bold;
-    font-family: 'Rammetto One', cursive;
+    font-family: 'Rammetto One', sans-serif;
     padding-bottom: 0.5rem;
     font-size: 2rem;
     border: none; 
