@@ -286,7 +286,7 @@ input {
 
 /*Style play message below the icon selectors*/
 #play-message {
-    font-size: 1rem;
+    font-size: 2rem;
     color: rgb(27, 1, 1);
 }
 
@@ -325,15 +325,17 @@ footer {
 .float-end {
     float:right;
     margin-right: 30px;
+    font-size: 2rem;
 }
 
 .float-end i {
     color: red;
+    font-size: 2rem;
 }
 
 footer a {
     color: black;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 /*Add style to adjust elements to fit screens 1200px*/
