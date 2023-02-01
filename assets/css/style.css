@@ -103,7 +103,7 @@ header {
 }
 
 #myModal {
-    margin-top: 225px;
+    margin-top: 210px;
 }
 
 /*Style modal text and contents*/
@@ -122,7 +122,7 @@ header {
 .show-modal {
     color: var(--black); 
     width: 100%;
-    height: 20rem;
+    height: 21rem;
     max-height: 30rem;
     max-width: 30rem;
     align-items: center;
@@ -460,9 +460,9 @@ footer a {
         margin-top: -10px;
         padding-bottom: 0rem;
         font-size: 1.5rem;
-        margin-left: 75px;
+        margin-left: 60px;
     }
-
+    
     .show-modal {
         margin-left: -400px;
         transform: scale(0.8);
