@@ -228,7 +228,7 @@ input {
 }
 
 .results {
-    font-size: 40px;
+    font-size: 3rem;
     color: rgb(189, 0, 0);
     margin-top: -30px;
 }
@@ -286,7 +286,7 @@ input {
 
 /*Style play message below the icon selectors*/
 #play-message {
-    font-size: 2rem;
+    font-size: 1rem;
     color: rgb(27, 1, 1);
 }
 
@@ -406,7 +406,7 @@ footer a {
 
     .results {
         height: 100%;
-        font-size: 20px;
+        font-size: 40px;
         padding-top: 15px;
     }
 
