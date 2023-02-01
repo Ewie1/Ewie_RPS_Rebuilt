@@ -139,7 +139,7 @@ The page consists of 3 pages and 9 sections
 ### Intro page
 - The intro page is consist of a small friendly dispalyed image of RocK,Paper, Scissors together
 along a play game button which leads to the game page with a the header and footer contents included.
-![intro-page](docs/features/game.JPG)
+![intro-page](docs/features/game.png)
 
 ### Header Display
 - The header give the name of the game with a special selected font style
@@ -159,7 +159,7 @@ along a play game button which leads to the game page with a the header and foot
 ### Score Count
 - The score count features located on the top left and top right of the game area shows the count of when the player win and when the computer win to give the player and idea of if they are winner or not. If there is a draw the numbers will remain the same. 
 
-![score-count](docs/features/result-message .png)
+![score-count](docs/features/result-message.png)
 
 ### Selected Images display
 - The selected image display shows animated images of a rock, a paper and  scissors to the player or computer selections. These images give the game character.
