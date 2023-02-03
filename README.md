@@ -210,7 +210,7 @@ along a play game button which leads to the game page with a the header and foot
 ### JavaScript Validation
 
 <details><summary>Js</summary>
-<img src="/docs/validations/js-validation.png">
+<img src="/docs/validations/js-validation.JPG">
 </details>
 
 ### Accessibility
