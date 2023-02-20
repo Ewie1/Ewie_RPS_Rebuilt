@@ -12,12 +12,15 @@
 
 /*Style the body color, add font style and center all text*/
 body {
-    height: 100%;
+    text-align: center;
+    font-family: 'Indie Flower', sans-serif;
+}
+
+.game-arena {
+    height: 615px;
     background: url("../images/photofunkybackground.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
-    font-family: 'Indie Flower', sans-serif;
 }
 
 /*Set background color and font size for the header*/
@@ -25,6 +28,7 @@ header {
     background-color: white;
     padding-bottom: 15px;
     font-size: 2rem;
+    height: max-content;
 }
 
 /*Set style for intro page and add perameters to accomadate the pagefade */
@@ -327,6 +331,7 @@ footer {
     float:right;
     margin-right: 30px;
     font-size: 2rem;
+    margin-top: -35px;
 }
 
 .float-end i {
@@ -339,8 +344,19 @@ footer a {
     font-size: 1.5rem;
 }
 
+.media-links {
+    width: 50%;
+    margin-left: 325px;
+}
+
 /*Add style to adjust elements to fit screens 1200px*/
 @media screen and (max-width: 1200px) {
+
+    .game-arena {
+        height: 100%;
+        margin-top: 175px;
+        overflow: hidden;
+    }
 
     header {
         font-size: 20px;
@@ -368,8 +384,28 @@ footer a {
         margin-left: -230px;
     }
 
+    #myModal {
+        margin-top: 390px;
+    }
+
+    #loginModal {
+        margin-top: 350px;
+    }
+
+    #gameLoseModal {
+        margin-top: 350px;
+    }
+
+    #gameWinModal {
+        margin-top: 350px;
+    }
+
     footer {
         margin-top: 250px;
+    }
+
+    .media-links {
+        margin-left: 205px;
     }
 
 }
@@ -477,6 +513,14 @@ footer a {
         font-size: 1rem;
     }
 
+    #myModal {
+        margin-top: 210px;
+    }
+
+    #loginModal, #gameWinModal, #gameLoseModal {
+        margin-top: 150px;
+    }
+
     #gameWinModal p {
         font-size: 1rem;
     }
@@ -491,5 +535,26 @@ footer a {
 
     footer a {
         font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    .media-links {
+        width: 50%;
+        margin-left: 80px;
+    }
+
+    .game-arena {
+        margin-top: 0px;
+        width: 100%;
+        height: 565px;
+    }
+
+    .float-end {
+        margin-right: 10px;
+        margin-top: -40px;
+    }
+
+    .float-end i {
+        font-size: 1.5rem;
     }
 }
