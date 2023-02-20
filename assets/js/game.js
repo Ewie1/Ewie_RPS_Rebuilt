@@ -15,23 +15,23 @@ let cScore = 0;
 
 /**
  * Verification of the user name input on the log-in screen */
- 
+
 document.getElementById("log-user").addEventListener("click", checkUsername);
 
 function checkUsername() {
-    let username = document.getElementById("user").value.trim();
-    let game = document.querySelector(".game");
-    let modal = document.getElementById("loginModal");
+  let username = document.getElementById("user").value.trim();
+  let game = document.querySelector(".game");
+  let modal = document.getElementById("loginModal");
 
-    if (username.length >= 1 && username.length <= 12) {
+  if (username.length >= 1 && username.length <= 12) {
     game.classList.add("fadeIn");
     modal.classList.remove("show-modal");
 
-    } else {
-        errorMessage.style.display = "block";
-        document.getElementById("user").focus();
-        document.getElementById("user").value = "";
-    }
+  } else {
+    errorMessage.style.display = "block";
+    document.getElementById("user").focus();
+    document.getElementById("user").value = "";
+  }
 }
 
 /**
@@ -39,38 +39,38 @@ function checkUsername() {
  */
 document.getElementById("user").addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-      checkUsername();
+    checkUsername();
   }
 });
 
 getInstructions.addEventListener("click", showInstructions);
 
 function showInstructions() {
-    let modal = document.getElementById("myModal");
-    modal.classList.add("show-modal");
+  let modal = document.getElementById("myModal");
+  modal.classList.add("show-modal");
 }
 
 function closeInstructions() {
-    let modal = document.getElementById("myModal");
-    modal.classList.remove("show-modal");    
+  let modal = document.getElementById("myModal");
+  modal.classList.remove("show-modal");
 }
 
 playBtn.addEventListener("click", getLogin);
 
 function getLogin() {
-    let modal = document.getElementById("loginModal");
-    modal.classList.add("show-modal");
-    errorMessage.style.display = "none"
+  let modal = document.getElementById("loginModal");
+  modal.classList.add("show-modal");
+  errorMessage.style.display = "none"
 }
 
 /**function to fade out intro page 
  * Fade in game page
  */
 function gameIntro() {
-  
+
   playBtn.addEventListener("click", function () {
     introScreen.classList.add("fadeOut");
-  }); 
+  });
 }
 
 /**
@@ -81,7 +81,7 @@ function gameIntro() {
  * 
  */
 function runGame() {
-  
+
   for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", function () {
       let computerNumber = Math.floor(Math.random() * 3);
@@ -192,7 +192,7 @@ function loseGame() {
  * Prevent actions when selections are clicked
  */
 function gameOver() {
-  
+
   rock.setAttribute("disabled", "disabled");
   paper.setAttribute("disabled", "disabled");
   scissors.setAttribute("disabled", "disabled");
@@ -213,7 +213,7 @@ function gameLose() {
 /**
  * Reset score and remove disable attribute 
  * play again
- */ 
+ */
 function gameRestart() {
   let playerScore = document.getElementById("player-score");
   let computerScore = document.getElementById("computer-score");
@@ -221,11 +221,11 @@ function gameRestart() {
   let loseModal = document.getElementById("gameLoseModal");
   pScore = 0;
   cScore = 0;
-  
+
   rock.removeAttribute("disabled", "disabled");
   paper.removeAttribute("disabled", "disabled");
   scissors.removeAttribute("disabled", "disabled")
-  
+
   winModal.classList.remove("show-modal");
   loseModal.classList.remove("show-modal");
   playerScore.innerText = 0;
@@ -237,4 +237,3 @@ gameIntro();
 runGame();
 winGame();
 loseGame();
-

@@ -65,7 +65,7 @@ header {
     margin-top: 30px;
     height: 30px;
     width: 150px;
-    box-shadow: 1px 1px 10px ;
+    box-shadow: 1px 1px 10px;
     background-color: rgb(212, 9, 9);
     border-radius: 5px;
     border: none;
@@ -80,8 +80,9 @@ header {
     transform: scale(0.4);
 }
 
-#ply-button, #instructions-btn {
-    box-shadow: 1px 1px 10px ;
+#ply-button,
+#instructions-btn {
+    box-shadow: 1px 1px 10px;
     background-color: rgb(9, 80, 212);
     border: none;
 }
@@ -90,7 +91,7 @@ header {
     font-size: 120%;
     margin-top: 160px;
     cursor: pointer;
-    position:absolute;  
+    position: absolute;
 }
 
 /*Add style for start game button and Modal contents*/
@@ -103,7 +104,7 @@ header {
 /* Set Modal position, style and size*/
 .modal {
     border-radius: 20px;
-    box-shadow: 1px 1px 10px ;
+    box-shadow: 1px 1px 10px;
 }
 
 #myModal {
@@ -111,7 +112,9 @@ header {
 }
 
 /*Style modal text and contents*/
-#login-screen, #phrase, .result-text {
+#login-screen,
+#phrase,
+.result-text {
     text-transform: uppercase;
 }
 
@@ -124,7 +127,7 @@ header {
 }
 
 .show-modal {
-    color: var(--black); 
+    color: var(--black);
     width: 100%;
     height: 21rem;
     max-height: 30rem;
@@ -133,7 +136,7 @@ header {
     display: block;
     z-index: 2;
     left: 400px;
-    margin-top: 150px;  
+    margin-top: 150px;
     justify-content: center;
 }
 
@@ -144,26 +147,26 @@ header {
     height: 100%;
 }
 
-#loginModal h2{
+#loginModal h2 {
     font-weight: bold;
     font-family: 'Rammetto One', sans-serif;
     padding-bottom: 0.5rem;
     font-size: 2rem;
-    border: none; 
+    border: none;
 }
 
 #gameWinModal h2 {
     font-weight: bold;
     padding-bottom: 0.5rem;
     font-size: 2rem;
-    border: none; 
+    border: none;
 }
 
-#gameLoseModal h2{
+#gameLoseModal h2 {
     font-weight: bold;
     padding-bottom: 0.5rem;
     font-size: 2rem;
-    border: none; 
+    border: none;
 }
 
 #gameWinModal p {
@@ -176,24 +179,24 @@ header {
 
 /*Style Modal input and buttons */
 input:focus {
-    outline: none !important;  
+    outline: none !important;
 }
 
 input {
     width: 50%;
-    box-shadow: 1px 1px 10px ;
+    box-shadow: 1px 1px 10px;
     border: 1px solid rgb(35, 35, 164);
     font-size: 1rem;
     border-radius: 10px;
 }
 
-.user-input{
+.user-input {
     font-size: 2rem;
 }
 
 .close-button {
     width: 4rem;
-    box-shadow: 1px 1px 10px ;
+    box-shadow: 1px 1px 10px;
     background-color: rgb(212, 9, 9);
     border: none;
     border-radius: 25px;
@@ -203,7 +206,7 @@ input {
     margin-top: 40px;
     height: 50px;
     width: 100px;
-    box-shadow: 1px 1px 10px ;
+    box-shadow: 1px 1px 10px;
     background-color: rgb(35, 35, 164);
     border-radius: 10px;
     border: none;
@@ -213,7 +216,7 @@ input {
     margin-top: 50px;
     height: 30px;
     width: 100px;
-    box-shadow: 1px 1px 10px ;
+    box-shadow: 1px 1px 10px;
     background-color: rgb(26, 177, 6);
     border-radius: 10px;
     border: none;
@@ -248,7 +251,8 @@ input {
 }
 
 /*Add color for score counts*/
-#computer-score, #player-score {
+#computer-score,
+#player-score {
     color: #fff;
 }
 
@@ -318,6 +322,7 @@ div.fadeIn {
     opacity: 1;
     pointer-events: all;
 }
+
 /*Add style for footer links*/
 footer {
     margin-top: 200px;
@@ -325,10 +330,10 @@ footer {
 
 .float-start {
     float: left;
-}  
+}
 
 .float-end {
-    float:right;
+    float: right;
     margin-right: 30px;
     font-size: 2rem;
     margin-top: -35px;
@@ -437,7 +442,7 @@ footer a {
         margin-top: 50px;
     }
 
-    #result{
+    #result {
         margin-top: -100px;
     }
 
@@ -464,7 +469,7 @@ footer a {
         margin-left: -20px;
         margin-right: -30px;
         transform: scale(0.4);
-    } 
+    }
 
     .selections {
         margin-top: 30px;
@@ -482,10 +487,10 @@ footer a {
     }
 
     .computer-image {
-     margin-top: -0px;
+        margin-top: -0px;
         margin-bottom: -50px;
         margin-left: -100px;
-        margin-right: -5px; 
+        margin-right: -5px;
     }
 
     .restart-game {
@@ -499,13 +504,13 @@ footer a {
         font-size: 1.5rem;
         margin-left: 68px;
     }
-    
+
     .show-modal {
         margin-left: -400px;
         transform: scale(0.8);
     }
 
-    .user-input{
+    .user-input {
         font-size: 1rem;
     }
 
@@ -517,14 +522,16 @@ footer a {
         margin-top: 210px;
     }
 
-    #loginModal, #gameWinModal, #gameLoseModal {
+    #loginModal,
+    #gameWinModal,
+    #gameLoseModal {
         margin-top: 150px;
     }
 
     #gameWinModal p {
         font-size: 1rem;
     }
-    
+
     #gameLoseModal p {
         font-size: 1rem;
     }
